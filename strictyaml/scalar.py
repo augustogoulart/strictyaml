@@ -10,7 +10,12 @@ import dateutil.parser
 import decimal
 import sys
 import re
-import urllib.parse
+
+try:
+    from urllib.parse import urlparse
+except ImportError:
+     from urlparse import urlparse
+
 from strictyaml.ruamel.scalarstring import PreservedScalarString
 
 
